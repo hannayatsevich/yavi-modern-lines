@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>YAVI Modern Lines</title>
+		<link href="./bundle.css" rel="stylesheet" type="text/css" />		
+	</head>
+	<body>		
+		<div class='buttonsfield'>
+			<a class='button' id='startBtn'>Start Game</a>
+			<a class='button' id="openhighscore">Score Table</a>
+			<a class='button' id="undo">Undo</a>
+			<a class='button' id="opencustomsettings">Custom Settings</a>
+			<a class='button' id="audiobutton"><img id="audioimg" src="img/BUTTON-sound-off.png"></a>
+		</div>
+		<svg id='playfield'>
+		</svg>
+		<div class='infofield'>
+			<div class='info'>
+				<p>Score </p>
+				<p id="insertscore">0</p>
+			</div>
+			<div class='info'>
+				<p>High Score</p>
+				<p id="inserthighscore"></p>
+			</div>
+		</div >
+		<div class='highscore' id="highscore">
+			<div >
+				<p id="insertupdatedrecords"> 
+				<br> 
+				<br> 
+				<br> 
+				<br> 
+				<br> 
+				<br> 
+				<br> 
+				<br> 
+				<br> 
+				</p>
+			</div>
+			<div >
+				<p>
+					<a class='button' id='closehighscore'>OK</a>
+				</p>
+			</div>
+		</div>
+		<div class='customsettings' id="customsettings">
+			<div class="choice">
+				<p>
+					<label><b>Field Size</b></label>
+					<br>
+					<br><input type="radio" name="cellsnumber" class="radio" value="9" checked> 9*9
+					<br><input type="radio" name="cellsnumber" class="radio" value="10"> 10*10
+					<br><input type="radio" name="cellsnumber" class="radio" value="11"> 11*11
+					<br><input type="radio" name="cellsnumber" class="radio" value="12"> 12*12
+					<br><input type="radio" name="cellsnumber" class="radio" value="13"> 13*13
+					<br><input type="radio" name="cellsnumber" class="radio" value="14"> 14*14
+				</p>
+				<p>
+					<label><b>Colors Number</b></label>
+					<br>
+					<br><input type="radio" name="colorsnumber" class="radio" value="7" checked> 7
+					<br><input type="radio" name="colorsnumber" class="radio" value="8"> 8
+					<br><input type="radio" name="colorsnumber" class="radio" value="9"> 9
+					<br><input type="radio" name="colorsnumber" class="radio" value="10"> 10
+				</p>
+				<p>
+					<label><b>Min Removal</b></label>
+					<br>
+					<br><input type="radio" name="minimumremoval" class="radio" value="5" checked> 5
+					<br><input type="radio" name="minimumremoval" class="radio" value="6"> 6
+					<br><input type="radio" name="minimumremoval" class="radio" value="7"> 7
+					<br><input type="radio" name="minimumremoval" class="radio" value="8"> 8
+				</p>
+			</div>
+			<div >
+				<p>
+					<a class='button' id='getcustomsettings'>OK</a>
+				</p>
+			</div>
+		</div>
+		<div class="gameover" id="gameover">
+			<p>GAME OVER</p>
+			<p id="insertgameoverscore">Your score</p>
+			<p>Enter your name</p>
+			<input type="text" id="playername">
+			<p>
+				<a class='button' id='okgameover'>OK</a>
+			</p>
+		</div>
+		<script src="https://fe.it-academy.by/JQ/jquery.js"></script>
+		<!--<script src="LinesModel.js"></script>
+		<script src="LinesView.js"></script>
+		<script src="LinesController.js"></script>-->
+		<script src="./bundle.js"></script>
+		
+	</body>
+</html>

@@ -1,0 +1,373 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html{
+	height: 100%;
+	width: 100%;	
+}
+body{
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;	
+}
+a{
+	cursor: pointer;
+}
+.buttonsfield, .infofield{
+	background-color: #9CA684;
+	display: flex;
+}
+.button{
+	box-sizing: content-box;
+	padding: 0.3rem 0.3rem;
+	margin: 1.5vmin;
+	background-color: #3F2912;
+	color: #F9E3BA;
+	border-radius: 3px;
+	text-decoration: none;
+	text-align: center;
+	transition: 0.3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.button:hover{
+	background-color: #F9E3BA;
+	color: #3F2912;
+	font-weight: bold;
+}
+.info{
+	padding: 0.3rem 0.3rem;
+	margin: 1.5vmin;
+	background-color: #3F2912;
+	color: #F9E3BA;
+	border-radius: 3px;
+	text-decoration: none;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.customsettings, .gameover, .newhighscore, .highscore{
+	top: -60vmax;	
+	-webkit-transition: top 1s linear;
+	-moz-transition: top 1s linear;
+	-o-transition: top 1s linear;
+	transition: top 1s linear;
+}
+.customsettings, .gameover, .newhighscore{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: stretch;
+	position: absolute;
+	border: solid 0.5vmin #3F2912;
+	background-color: #9CA684;
+	border-radius: 3px;
+	
+}
+.highscore{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: stretch;
+	position: absolute;
+	border: solid 0.5vmin #3F2912;
+	background-color: #9CA684;
+	border-radius: 3px;
+	text-align: center;	
+}
+.highscore>div:first-of-type{
+	padding-top: 0.1rem;
+}
+.choice{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.gameover>p, .newhighscore>p{
+	text-align: center;
+	font-weight: bold;
+}
+.newhighscore{
+	justify-content: center;
+}
+label{
+	width: 70%;
+}
+input{
+	width: 20%;
+}
+input[type='text']{
+	margin: 0 auto;
+}
+@media screen and (orientation:landscape) and (min-aspect-ratio:7/5){
+	body{
+		font-size: 3.5vmin;
+		height: 98vmin;
+		width: 140vmin;
+		margin: 1vmin auto;
+		justify-content: space-between;
+	}
+	.buttonsfield, .infofield{
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 21vmin;
+		height:100%;		
+	}
+	#playfield{
+		width: 98vmin;
+		height:100%;
+	}
+	.button{
+		width: 80%;
+		height: 10%;	
+	}
+	.info{
+		width: 89%;
+		height: 13%;	
+	}
+	img{
+		height: 100%;
+	}
+	.customsettings{
+		width: 80vmin;
+		height: 52vmin;
+		left: 30vmin;
+	}
+	.highscore{
+		width: 80vmin;
+		height: 50vmin;
+		left: 30vmin;
+	}
+	.gameover, .newhighscore{
+		width: 50vmin;
+		height: 28vmin;
+		left: 45vmin;
+	}
+	#customsettingsshow{
+		top: 23vmin;
+	}
+	#highscoreshow{
+		top: 24vmin;
+	}
+	#gameovershow, #newhighscoreshow{
+		top: 35vmin;
+	}
+	.customsettings .button, .highscore .button, .gameover .button{
+		height: 2vmin;
+		width: 90%;
+		font-weight: normal;
+		margin: auto;
+	}
+	.radio{
+		width: 3vmax;
+	}
+	input[type='text']{
+		width: 25vmin;
+		height: 3.5vmin;
+	}
+}
+@media screen and (orientation:landscape) and (max-aspect-ratio:7/5){
+	body{
+		font-size: 2.8vmin;
+		height: 68.6vmax;
+		width: 98vmax;
+		margin: 1vmax 1vmax;
+		justify-content: space-between;
+	}
+	.buttonsfield, .infofield{
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 14.7vmax;
+		height:100%;		
+	}
+	#playfield{
+		width: 68.6vmax;
+		height:100%;
+	}
+	.button{
+		width: 80%;
+		height: 10%;		
+	}
+	.info{
+		width: 89%;
+		height: 13%;		
+	}
+	img{
+		height: 100%;
+	}
+	.customsettings{
+		width: 55vmax;
+		height: 35vmax;
+		left: 21.5vmax;
+	}
+	.highscore{
+		width: 55vmax;
+		height: 41vmax;
+		left: 21.5vmax;
+	}
+	.gameover, .newhighscore{
+		width: 35vmax;
+		height: 20vmax;
+		left: 31.5vmax;
+	}
+	#customsettingsshow{
+		top: 17vmax;
+	}
+	#highscoreshow{
+		top: 13.8vmax;
+	}
+	#gameovershow, #newhighscoreshow{
+		top: 24.3vmax;
+	}
+	.customsettings .button, .highscore .button, .gameover .button{
+		height: 2vmin;
+		width: 90%;
+		margin: auto;
+		font-weight: normal;
+	}
+	.radio{
+		width: 3vmin;
+	}
+	input[type='text']{
+		width: 17.5vmax;
+		height: 2.6vmax;
+		font-size: 1.5vmax;
+	}
+}
+@media screen and (orientation:portrait) and (max-aspect-ratio:5/7){
+	body{
+		font-size: 3.5vmin;
+		height: 140vmin;
+		width: 98vmin;
+		margin: 1vmin auto;
+		justify-content: space-between;
+	}
+	.buttonsfield, .infofield{
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 21vmin;
+	}	
+	#playfield{
+		width: 100%;
+		height: 98vmin;
+	}
+	.button, .info{
+		height: 50%;			
+	}
+	.button{
+		flex-basis: 20%;/*изменить при изменении количества кнопок/полей*/	
+	}
+	.info{
+		flex-basis: 30%;/*изменить при изменении количества кнопок/полей*/
+	}
+	img{
+		height: 100%;
+	}
+	.customsettings{
+		width: 98vmin;
+		height: 50vmin;
+	}
+	.highscore{
+		width: 98vmin;
+		height: 51vmin;
+	}
+	.gameover, .newhighscore{
+		width: 49vmin;
+		height: 27vmin;
+		left: 24.5vmin;
+	}
+	#customsettingsshow{
+		top: 45vmin;
+	}
+	#highscoreshow{
+		top: 44.5vmin;
+	}
+	#gameovershow, #newhighscoreshow{
+		top: 56.5vmin;
+	}
+	.customsettings .button, .highscore .button, .gameover .button{
+		height: 2vmin;
+		font-weight: normal;
+	}
+	.radio{
+		width: 4vmin;
+	}
+	input[type='text']{
+		width: 24.5vmin;
+		height: 4vmin;
+	}
+}
+@media screen and (orientation:portrait) and (min-aspect-ratio:5/7){
+	body{
+		font-size: 3vmin;
+		height: 98vmax;
+		width: 68.6vmax;
+		margin: 1vmax auto;
+		justify-content: space-between;
+	}
+	.buttonsfield, .infofield{
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 14.7vmax;
+	}
+	#playfield{
+		width: 100%;
+		height: 68.6vmax;
+	}
+	.button, .info{
+		height: 50%;		
+	}
+	.button{
+		flex-basis: 20%;/*изменить при изменении количества кнопок/полей*/
+	}
+	.info{
+		flex-basis: 30%;/*изменить при изменении количества кнопок/полей*/
+	}
+	img{
+		height: 100%;
+	}
+	.customsettings{
+		width: 68.6vmax;
+		height: 36vmax;
+	}
+	.highscore{
+		width: 68.6vmax;
+		height: 42vmax;
+	}
+	.gameover, .newhighscore{
+		width: 34vmax;
+		height: 22vmax;
+		left: 17.3vmax;
+	}
+	#customsettingsshow{
+		top: 31vmax;
+	}
+	#highscoreshow{
+		top: 28vmax;
+	}
+	#gameovershow, #newhighscoreshow{
+		top: 38vmax;
+	}
+	.customsettings .button, .highscore .button, .gameover .button{
+		height: 3vmin;
+		font-weight: normal;
+	}
+	.radio{
+		width: 4vmin;
+	}
+	input[type='text']{
+		width: 17vmax;
+	}
+}
+/*# sourceMappingURL=bundle.css.map*/
