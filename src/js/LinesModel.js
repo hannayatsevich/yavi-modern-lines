@@ -9,7 +9,8 @@ export function LinesModel(cellsNum, numOfColors, newBallsNumber, deleteMinimum)
 	self.newBallsNumber = newBallsNumber;
 	self.deleteMinimum = deleteMinimum;
 	self.totalCellsNum = cellsNum * cellsNum;
-	self.ballColors = ['#81BF63', '#F29B30', '#BF0426', '#4AA2D9', '#FAE71B', '#023859', '#96D9C6', '#038C4C', '#1F818C', '#F5A28B'];
+	//self.ballColors = ['#81BF63', '#F29B30', '#BF0426', '#4AA2D9', '#FAE71B', '#023859', '#96D9C6', '#038C4C', '#1F818C', '#F5A28B'];
+	self.ballColors = ['#81BF63', '#F29B30', '#BF0426', '#1F818C', '#FAE71B', '#023859', '#4AA2D9', '#038C4C', '#c154c1', '#d36d51'];
 	self.gameBallColors = [];//цвета, с которыми будем работать в конкретной игре
 	self.ballMatrix = [];//массив с информацией, есть ли шар в клетке
 	self.ballColorMatrix = [];//массив с информацией, какого цвета шар в клетке
